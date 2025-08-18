@@ -1,3 +1,5 @@
+package domain;
+
 public non-sealed class Manager extends Employee {
     private String login;
     private String password;
@@ -15,6 +17,16 @@ public non-sealed class Manager extends Employee {
     public String getCode(){
         return "M" + super.getCode();
     }
+
+    @Override
+    public double getFullSalary() {
+        return this.salary + this.commission;
+    }
+
+    public double getFullSalary(double extra) {
+        return this.getFullSalary() + extra;
+    }
+
     public String getLogin() {
         return login;
     }
