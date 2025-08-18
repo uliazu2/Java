@@ -1,3 +1,5 @@
+package domain;
+
 public abstract sealed class Employee permits Manager, Salesman{
     protected String code;
     protected String name;
@@ -55,4 +57,5 @@ public abstract sealed class Employee permits Manager, Salesman{
     public void setAge(int age) {
         this.age = age;
     }
+    public abstract double getFullSalary();
 }
