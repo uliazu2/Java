@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
 public interface VideoPlayer {
+    void playVideo();
+    void pauseVideo();
+    void stopVideo();
 }
